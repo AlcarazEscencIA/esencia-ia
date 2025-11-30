@@ -8,21 +8,32 @@ import { Check } from "lucide-react"
 const plans = [
     {
         name: "Inicial",
-        price: "$999",
-        description: "Perfecto para startups y pequeños negocios.",
-        features: ["Landing Page Personalizada", "Integración Básica de IA", "Soporte por Email", "Hosting Incluido"],
+        price: "ARS$ 20.000",
+        description: "Perfecto para pequeños emprendimientos y negocios.",
+        features: [
+            "10 Fotos de productos seleccionados para publicar en redes sociales",
+            "5 Fotos en formato vertical para historias",
+            "1 Video publicitario",
+            "Comunicacion constante para mayor satisfaccion"
+        ],
     },
     {
         name: "Profesional",
-        price: "$2,499",
-        description: "Para empresas que buscan escalar.",
-        features: ["Sitio Web Completo", "Módulos de IA Avanzados", "Dashboard Personalizado", "Soporte Prioritario 24/7", "SEO Optimizado"],
+        price: "ARS$ 100.000",
+        description: "Recomendado para dar a conocer tu proyecto.",
+        features: [
+            "Landing Page simple, perfecta para mostrar tus ideas.",
+            "40 Fotos de productos seleccionados para publicar en redes sociales",
+            "20 Fotos en formato vertical para historias",
+            "5 Video publicitario",
+            "Comunicacion constante para mayor satisfaccion"
+        ],
         popular: true,
     },
     {
         name: "Empresarial",
         price: "A Medida",
-        description: "Soluciones complejas y de alto rendimiento.",
+        description: "Recomendado para proyectos complejos y de alto rendimiento.",
         features: ["Desarrollo de Software Full Stack", "Infraestructura Dedicada", "Consultoría de IA", "SLA Garantizado", "Equipo Dedicado"],
     },
 ]

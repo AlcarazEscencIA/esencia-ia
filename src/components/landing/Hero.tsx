@@ -55,7 +55,7 @@ export function Hero() {
                     transition={{ delay: 0.8, duration: 0.8 }}
                     className="flex flex-col items-center justify-center gap-6 sm:flex-row"
                 >
-                    <Link href="/dashboard">
+                    <Link href="#services">
                         <Button size="lg" className="group h-14 min-w-[200px] rounded-full text-lg cursor-hover">
                             Iniciar Experiencia
                             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

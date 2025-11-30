@@ -12,14 +12,14 @@ const services = [
         title: "Contenido Visual Interactivo",
         description: "Crea experiencias visuales impactantes que cautivan a tu audiencia. Desde animaciones hasta interfaces inmersivas.",
         icon: Palette,
-        href: "/visual-content",
+        href: "#visual-content",
         color: "text-accent",
     },
     {
         title: "Desarrollo de Software a Medida",
         description: "Soluciones tecnológicas robustas y escalables diseñadas específicamente para las necesidades de tu negocio.",
         icon: Code,
-        href: "/custom-dev",
+        href: "#custom-dev",
         color: "text-secondary",
     },
 ]
@@ -47,26 +47,26 @@ export function Services() {
                             transition={{ duration: 0.8, delay: index * 0.2 }}
                             viewport={{ once: true }}
                         >
-                            <Card className="group relative h-full overflow-hidden border-white/10 bg-white/5 transition-all duration-500 hover:border-primary/50 hover:bg-white/10">
-                                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                                <CardHeader>
-                                    <service.icon className={`mb-6 h-16 w-16 ${service.color} transition-transform duration-500 group-hover:scale-110`} />
-                                    <CardTitle className="text-3xl">{service.title}</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="mb-8 text-lg text-muted-foreground">
-                                        {service.description}
-                                    </p>
-                                    <Link href={service.href}>
+                            <Link href={service.href} className="block h-full">
+                                <Card className="group relative h-full overflow-hidden border-white/10 bg-white/5 transition-all duration-500 hover:border-primary/50 hover:bg-white/10">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                                    <CardHeader>
+                                        <service.icon className={`mb-6 h-16 w-16 ${service.color} transition-transform duration-500 group-hover:scale-110`} />
+                                        <CardTitle className="text-3xl">{service.title}</CardTitle>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p className="mb-8 text-lg text-muted-foreground">
+                                            {service.description}
+                                        </p>
                                         <Button
                                             variant="ghost"
                                             className="text-lg group-hover:text-primary pl-0 hover:bg-transparent"
                                         >
                                             Explorar <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-2" />
                                         </Button>
-                                    </Link>
-                                </CardContent>
-                            </Card>
+                                    </CardContent>
+                                </Card>
+                            </Link>
                         </motion.div>
                     ))}
                 </div>
@@ -91,8 +91,8 @@ export function Services() {
                         className="mx-auto max-w-5xl"
                     >
                         <ComparisonSlider
-                            itemOne="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
-                            itemTwo="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop&sat=-100"
+                            itemOne="/videos/producto-ai.mp4"
+                            itemTwo="/images/producto-estandar.png"
                             labelOne="Con Esencia IA"
                             labelTwo="Estándar"
                         />
