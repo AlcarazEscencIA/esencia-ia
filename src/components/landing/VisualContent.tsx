@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 
 export function VisualContent() {
@@ -14,7 +15,7 @@ export function VisualContent() {
                     viewport={{ once: true }}
                     className="text-center"
                 >
-                    <h2 className="text-4xl font-bold mb-4">
+                    <h2 className="text-4xl font-bold tracking-wide mb-4">
                         RESPALDO <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">VISUAL</span>
                     </h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -23,17 +24,35 @@ export function VisualContent() {
                 </motion.div>
                 {/* Example Grid */}
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    {[1, 2, 3].map((item) => (
+                    {[
+                        { title: "OWO 3D", image: "/images/owo3d.png", link: "https://owo3d.fun" },
+                        { title: "Viajes Oeste", image: "/images/viajes-oeste.jpg", link: "https://viajesoeste-one.vercel.app" },
+                        { title: "Ejemplo 3", image: "", link: "#" }
+                    ].map((item, index) => (
                         <motion.div
-                            key={item}
+                            key={index}
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: item * 0.1 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="aspect-video rounded-xl bg-white/5 border border-white/10 flex items-center justify-center relative overflow-hidden group hover:border-primary/50 transition-colors"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <span className="text-muted-foreground font-light tracking-widest uppercase text-sm">Ejemplo {item}</span>
+                            {item.link !== "#" ? (
+                                <Link href={item.link} target="_blank" className="absolute inset-0 z-10">
+                                    <span className="sr-only">Ver {item.title}</span>
+                                </Link>
+                            ) : null}
+
+                            {item.image ? (
+                                <img
+                                    src={item.image}
+                                    alt={item.title}
+                                    className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-opacity"
+                                />
+                            ) : (
+                                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                            )}
+
                         </motion.div>
                     ))}
                 </div>

@@ -17,7 +17,7 @@ export function CustomDev() {
                     viewport={{ once: true }}
                     className="text-center"
                 >
-                    <h2 className="text-4xl font-bold mb-4">
+                    <h2 className="text-4xl font-bold tracking-wide mb-4">
                         PROCESO Y <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">ENFOQUE</span>
                     </h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
@@ -52,14 +52,14 @@ export function CustomDev() {
                                         <step.icon className="h-6 w-6 text-secondary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-lg font-bold mb-1">{step.title}</h4>
+                                        <h4 className="text-lg font-bold tracking-wide mb-1">{step.title}</h4>
                                         <p className="text-muted-foreground text-sm">{step.desc}</p>
                                     </div>
                                 </motion.div>
                             ))}
                         </div>
                         <div className="mt-8 pt-8 border-t border-white/10">
-                            <p className="text-lg font-medium text-white/80">
+                            <p className="text-lg font-medium tracking-wide text-white/80">
                                 Este enfoque permite construir sitios funcionales, coherentes y preparados para crecer.
                             </p>
                         </div>
@@ -72,7 +72,7 @@ export function CustomDev() {
                         className="relative h-[500px] rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-secondary/10 to-primary/10"
                     >
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="text-8xl font-black text-white/5 select-none text-center leading-none">
+                            <div className="text-8xl font-black tracking-widest text-white/5 select-none text-center leading-none">
                                 STRAT<br />EGY
                             </div>
                         </div>

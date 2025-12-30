@@ -59,7 +59,7 @@ export function Contact() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="mb-6 text-3xl font-bold sm:text-4xl">
+                        <h2 className="mb-6 text-3xl font-bold tracking-wide sm:text-4xl">
                             ¿Listo para profesionalizar tu proyecto?
                         </h2>
                         <p className="mb-8 text-lg text-muted-foreground">
@@ -71,8 +71,8 @@ export function Contact() {
                                     📧
                                 </div>
                                 <div>
-                                    <div className="font-medium">Email</div>
-                                    <div className="text-muted-foreground">contacto@esencia-ia.com</div>
+                                    <div className="font-medium tracking-wide">Email</div>
+                                    <div className="text-muted-foreground">esenciaweb.ia@gmail.com</div>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4">
@@ -80,7 +80,7 @@ export function Contact() {
                                     📍
                                 </div>
                                 <div>
-                                    <div className="font-medium">Ubicación</div>
+                                    <div className="font-medium tracking-wide">Ubicación</div>
                                     <div className="text-muted-foreground">Buenos Aires, Argentina</div>
                                 </div>
                             </div>
@@ -100,7 +100,7 @@ export function Contact() {
                                 <form onSubmit={handleSubmit} className="space-y-4">
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div className="space-y-2">
-                                            <label htmlFor="name" className="text-sm font-medium">Nombre</label>
+                                            <label htmlFor="name" className="text-sm font-medium tracking-wide">Nombre</label>
                                             <Input
                                                 id="name"
                                                 placeholder="Tu nombre"
@@ -111,7 +111,7 @@ export function Contact() {
                                             />
                                         </div>
                                         <div className="space-y-2">
-                                            <label htmlFor="email" className="text-sm font-medium">Email</label>
+                                            <label htmlFor="email" className="text-sm font-medium tracking-wide">Email</label>
                                             <Input
                                                 id="email"
                                                 type="email"
@@ -124,7 +124,7 @@ export function Contact() {
                                         </div>
                                     </div>
                                     <div className="space-y-2">
-                                        <label htmlFor="message" className="text-sm font-medium">Mensaje</label>
+                                        <label htmlFor="message" className="text-sm font-medium tracking-wide">Mensaje</label>
                                         <textarea
                                             id="message"
                                             className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 glass"

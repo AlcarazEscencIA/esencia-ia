@@ -13,7 +13,7 @@ export function Institutional() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-3xl font-bold mb-6">Institucional y Educación</h2>
+                        <h2 className="text-3xl font-bold tracking-wide mb-6">Institucional y Educación</h2>
                         <div className="space-y-6 text-lg text-muted-foreground">
                             <p>
                                 Trabajamos con instituciones y proyectos educativos que necesitan una presencia digital clara, confiable y profesional.
@@ -32,11 +32,11 @@ export function Institutional() {
                     >
                         <div className="p-8 rounded-2xl bg-black/40 border border-white/10 flex flex-col items-center justify-center text-center">
                             <Building className="h-12 w-12 text-primary mb-4" />
-                            <span className="font-bold">Instituciones</span>
+                            <span className="font-bold tracking-wide">Instituciones</span>
                         </div>
                         <div className="p-8 rounded-2xl bg-black/40 border border-white/10 flex flex-col items-center justify-center text-center">
                             <GraduationCap className="h-12 w-12 text-secondary mb-4" />
-                            <span className="font-bold">Educación</span>
+                            <span className="font-bold tracking-wide">Educación</span>
                         </div>
                     </motion.div>
                 </div>

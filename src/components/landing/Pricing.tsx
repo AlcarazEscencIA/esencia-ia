@@ -47,7 +47,7 @@ export function Pricing() {
         <section id="pricing" className="py-24 bg-black/70 backdrop-blur-sm">
             <div className="container mx-auto px-4">
                 <div className="mb-16 text-center">
-                    <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Planes Base</h2>
+                    <h2 className="mb-4 text-3xl font-bold tracking-wide sm:text-4xl">Planes Base</h2>
                     <p className="text-muted-foreground">Nuestros proyectos se desarrollan a partir de planes base orientativos</p>
                 </div>
 
@@ -67,7 +67,7 @@ export function Pricing() {
                                     </div>
                                 )}
                                 <div className="mb-6">
-                                    <h3 className="text-2xl font-bold">{plan.name}</h3>
+                                    <h3 className="text-2xl font-bold tracking-wide">{plan.name}</h3>
                                     <p className="text-muted-foreground mt-2 text-sm h-10">{plan.description}</p>
                                 </div>
                                 <div className="mb-6">

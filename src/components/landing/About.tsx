@@ -21,7 +21,7 @@ export function About() {
                     />
                     {/* Decorative S symbol from reference */}
                     <div className="absolute right-8 top-1/2 -translate-y-1/2 z-20 hidden lg:block text-primary/40 font-serif text-[20rem] opacity-50 mix-blend-overlay italic">
-                        S
+
                     </div>
                 </motion.div>
 
@@ -33,7 +33,7 @@ export function About() {
                         viewport={{ once: true }}
                         className="space-y-10 max-w-xl"
                     >
-                        <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl leading-tight text-primary">
+                        <h2 className="text-4xl font-bold tracking-wide sm:text-5xl md:text-6xl leading-tight text-primary">
                             En ESENCiA no hacemos páginas
                             <span className="block text-white mt-2">web sin sentido.</span>
                         </h2>
@@ -42,7 +42,7 @@ export function About() {
                             <p>
                                 Diseñamos sitios pensados para cumplir un objetivo concreto: comunicar con claridad, generar confianza y acompañar el crecimiento de cada proyecto.
                             </p>
-                            <p className="text-white font-medium">
+                            <p className="text-white font-medium tracking-wide">
                                 Trabajamos desde la estructura, la estrategia y el diseño consciente, entendiendo la web como una herramienta clave de profesionalización y presencia digital.
                             </p>
                             <p>

@@ -47,8 +47,8 @@ export function Hero() {
                         <img src="/logo.png" alt="Esencia IA Logo" className="object-contain w-full h-full drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
                     </motion.div>
 
-                    <h1 className="text-6xl font-black tracking-tighter sm:text-8xl md:text-9xl mb-4">
-                        ESENCIA <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary">IA</span>
+                    <h1 className="text-6xl font-black tracking-widest sm:text-8xl md:text-9xl mb-4">
+                        ESENC<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary">IA</span>
                     </h1>
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-white/80 tracking-widest uppercase">
                         Diseño web estratégico
@@ -63,7 +63,7 @@ export function Hero() {
                 >
                     Presencia digital profesional para marcas, instituciones y emprendedores.
                     <br />
-                    <span className="text-white font-medium block mt-2">
+                    <span className="text-white font-medium tracking-wide block mt-2">
                         Creamos sitios web claros, modernos y orientados a resultados.
                     </span>
                 </motion.p>

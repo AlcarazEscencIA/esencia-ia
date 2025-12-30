@@ -40,7 +40,7 @@ export function Services() {
                     viewport={{ once: true }}
                     className="mb-20 text-center"
                 >
-                    <h2 className="mb-6 text-4xl font-bold sm:text-5xl md:text-6xl">Nuestros Servicios</h2>
+                    <h2 className="mb-6 text-4xl font-bold tracking-wide sm:text-5xl md:text-6xl">Nuestros Servicios</h2>
                     <p className="mx-auto max-w-2xl text-xl text-muted-foreground">Soluciones digitales para cada etapa de crecimiento</p>
                 </motion.div>
 

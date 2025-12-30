@@ -6,7 +6,7 @@ import { CustomDev } from "@/components/landing/CustomDev"
 import { Institutional } from "@/components/landing/Institutional"
 import { Pricing } from "@/components/landing/Pricing"
 import { Contact } from "@/components/landing/Contact"
-import { ScrollToTop } from "@/components/ui/ScrollToTop"
+import { FixedContactButton } from "@/components/ui/FixedContactButton"
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
         <Pricing />
         <Contact />
       </main>
-      <ScrollToTop />
+      <FixedContactButton />
     </>
   )
 }
