@@ -16,6 +16,8 @@ export function Hero() {
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
     const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
+    const logoY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
+
     return (
         <section ref={ref} className="relative flex h-screen items-center justify-center overflow-hidden">
             {/* Dynamic Background */}
@@ -24,29 +26,46 @@ export function Hero() {
                 className="absolute inset-0 z-0"
             >
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/20 via-background to-background blur-3xl" />
-                <div className="absolute top-0 left-0 h-full w-full bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/20 via-background to-background blur-3xl" />
+                {/* Grid removed */}
             </motion.div>
 
             <div className="container relative z-10 mx-auto px-4 text-center">
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    className="mb-8"
+                    className="mb-8 flex flex-col items-center justify-center"
                 >
-                    <h1 className="text-6xl font-black tracking-tighter sm:text-8xl md:text-9xl">
+                    <motion.div
+                        style={{ y: logoY }}
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.2, duration: 0.8 }}
+                        className="mb-8 relative w-32 h-32 md:w-40 md:h-40"
+                    >
+                        <img src="/logo.png" alt="Esencia IA Logo" className="object-contain w-full h-full drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]" />
+                    </motion.div>
+
+                    <h1 className="text-6xl font-black tracking-tighter sm:text-8xl md:text-9xl mb-4">
                         ESENCIA <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary">IA</span>
                     </h1>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-white/80 tracking-widest uppercase">
+                        Diseño web estratégico
+                    </h2>
                 </motion.div>
 
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5, duration: 0.8 }}
-                    className="mx-auto mb-12 max-w-2xl text-xl text-muted-foreground sm:text-2xl font-light"
+                    className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground sm:text-xl font-light leading-relaxed"
                 >
-                    Redefiniendo el estándar digital. <br />
-                    <span className="text-white font-medium">Diseño cinemático. Desarrollo inteligente.</span>
+                    Presencia digital profesional para marcas, instituciones y emprendedores.
+                    <br />
+                    <span className="text-white font-medium block mt-2">
+                        Creamos sitios web claros, modernos y orientados a resultados.
+                    </span>
                 </motion.p>
 
                 <motion.div
@@ -55,15 +74,10 @@ export function Hero() {
                     transition={{ delay: 0.8, duration: 0.8 }}
                     className="flex flex-col items-center justify-center gap-6 sm:flex-row"
                 >
-                    <Link href="#services">
+                    <Link href="#contact">
                         <Button size="lg" className="group h-14 min-w-[200px] rounded-full text-lg cursor-hover">
-                            Iniciar Experiencia
+                            Consultar proyecto
                             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                        </Button>
-                    </Link>
-                    <Link href="#services">
-                        <Button size="lg" variant="outline" className="h-14 min-w-[200px] rounded-full border-white/10 bg-white/5 text-lg backdrop-blur-sm hover:bg-white/10 cursor-hover">
-                            Explorar Servicios
                         </Button>
                     </Link>
                 </motion.div>

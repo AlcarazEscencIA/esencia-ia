@@ -60,12 +60,10 @@ export function Contact() {
                         viewport={{ once: true }}
                     >
                         <h2 className="mb-6 text-3xl font-bold sm:text-4xl">
-                            ¿Listo para transformar tu negocio?
+                            ¿Listo para profesionalizar tu proyecto?
                         </h2>
                         <p className="mb-8 text-lg text-muted-foreground">
-                            En Esencia IA, no solo construimos software; construimos el futuro de tu empresa.
-                            Nuestra combinación única de diseño visual y potencia técnica nos permite entregar
-                            resultados que superan las expectativas.
+                            Si necesitás una web profesional, con estructura, claridad y criterio, podés escribirnos para conversar sobre tu proyecto.
                         </p>
                         <div className="space-y-4">
                             <div className="flex items-center gap-4">
@@ -140,8 +138,8 @@ export function Contact() {
 
                                     {submitStatus.type && (
                                         <div className={`p-3 rounded-md text-sm ${submitStatus.type === "success"
-                                                ? "bg-green-500/10 text-green-500 border border-green-500/20"
-                                                : "bg-red-500/10 text-red-500 border border-red-500/20"
+                                            ? "bg-green-500/10 text-green-500 border border-green-500/20"
+                                            : "bg-red-500/10 text-red-500 border border-red-500/20"
                                             }`}>
                                             {submitStatus.message}
                                         </div>

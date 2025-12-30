@@ -7,44 +7,48 @@ import { Check } from "lucide-react"
 
 const plans = [
     {
-        name: "Inicial",
-        price: "ARS$ 20.000",
-        description: "Perfecto para pequeños emprendimientos y negocios.",
+        name: "Landing Page estratégica",
+        price: "Consultar",
+        description: "Ideal para presentar un servicio, lanzar una propuesta o captar clientes.",
         features: [
-            "10 Fotos de productos seleccionados para publicar en redes sociales",
-            "5 Fotos en formato vertical para historias",
-            "1 Video publicitario",
-            "Comunicacion constante para mayor satisfaccion"
+            "Estructura clara y directa",
+            "Diseño enfocado en conversión",
+            "Optimización para móviles",
+            "Integración con WhatsApp/Formulario"
         ],
     },
     {
-        name: "Profesional",
-        price: "ARS$ 100.000",
-        description: "Recomendado para dar a conocer tu proyecto.",
+        name: "Web institucional",
+        price: "Consultar",
+        description: "Pensada para marcas y profesionales que buscan transmitir confianza y orden.",
         features: [
-            "Landing Page simple, perfecta para mostrar tus ideas.",
-            "40 Fotos de productos seleccionados para publicar en redes sociales",
-            "20 Fotos en formato vertical para historias",
-            "5 Video publicitario",
-            "Comunicacion constante para mayor satisfaccion"
+            "Múltiples secciones informativas",
+            "Diseño profesional y coherente",
+            "Gestión de contenido básica",
+            "Canal oficial de comunicación"
         ],
         popular: true,
     },
     {
-        name: "Empresarial",
-        price: "A Medida",
-        description: "Recomendado para proyectos complejos y de alto rendimiento.",
-        features: ["Desarrollo de Software Full Stack", "Infraestructura Dedicada", "Consultoría de IA", "SLA Garantizado", "Equipo Dedicado"],
+        name: "Tienda online básica",
+        price: "Consultar",
+        description: "Comenzá a vender por internet de forma simple y profesional.",
+        features: [
+            "Catálogo de productos",
+            "Carrito de compras simple",
+            "Integración de pagos básicos",
+            "Sin dependencias complejas"
+        ],
     },
 ]
 
 export function Pricing() {
     return (
-        <section id="pricing" className="py-24 bg-black/20">
+        <section id="pricing" className="py-24 bg-black/70 backdrop-blur-sm">
             <div className="container mx-auto px-4">
                 <div className="mb-16 text-center">
-                    <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Planes y Precios</h2>
-                    <p className="text-muted-foreground">Inversión transparente para resultados excepcionales</p>
+                    <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Planes Base</h2>
+                    <p className="text-muted-foreground">Nuestros proyectos se desarrollan a partir de planes base orientativos</p>
                 </div>
 
                 <div className="grid gap-8 md:grid-cols-3 lg:gap-8">
@@ -56,32 +60,36 @@ export function Pricing() {
                             transition={{ delay: index * 0.1 }}
                             viewport={{ once: true }}
                         >
-                            <Card className={`relative flex h-full flex-col ${plan.popular ? "border-primary shadow-lg shadow-primary/20" : ""}`}>
+                            <Card className={`relative flex h-full flex-col p-6 ${plan.popular ? "border-primary shadow-lg shadow-primary/20" : ""}`}>
                                 {plan.popular && (
                                     <div className="absolute -top-4 left-0 right-0 mx-auto w-fit rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
                                         Más Popular
                                     </div>
                                 )}
-                                <CardHeader>
-                                    <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                                    <div className="mt-4 text-4xl font-bold">{plan.price}</div>
-                                    <CardDescription className="mt-2">{plan.description}</CardDescription>
-                                </CardHeader>
-                                <CardContent className="flex-1">
-                                    <ul className="space-y-3">
-                                        {plan.features.map((feature) => (
-                                            <li key={feature} className="flex items-center text-sm text-muted-foreground">
-                                                <Check className="mr-2 h-4 w-4 text-primary" />
-                                                {feature}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </CardContent>
-                                <CardFooter>
-                                    <Button className="w-full" variant={plan.popular ? "default" : "outline"}>
-                                        Elegir Plan
-                                    </Button>
-                                </CardFooter>
+                                <div className="mb-6">
+                                    <h3 className="text-2xl font-bold">{plan.name}</h3>
+                                    <p className="text-muted-foreground mt-2 text-sm h-10">{plan.description}</p>
+                                </div>
+                                <div className="mb-6">
+                                    {/* Price removed as per request to avoid 'Consultar' in large text */}
+                                </div>
+                                <ul className="mb-8 space-y-4 flex-1">
+                                    {plan.features.map((feature) => (
+                                        <li key={feature} className="flex items-center gap-3 text-sm text-muted-foreground">
+                                            <Check className={`h-5 w-5 ${plan.popular ? "text-primary" : "text-white/50"}`} />
+                                            {feature}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <Button
+                                    className={`w-full ${plan.popular
+                                        ? "bg-primary hover:bg-primary/90 text-white shadow-[0_0_20px_rgba(138,43,226,0.3)] hover:shadow-[0_0_30px_rgba(138,43,226,0.5)] transition-all duration-300"
+                                        : "bg-white/5 hover:bg-white/10 text-white border border-white/10"
+                                        }`}
+                                    asChild
+                                >
+                                    <a href="#contact">CONSULTAR</a>
+                                </Button>
                             </Card>
                         </motion.div>
                     ))}
