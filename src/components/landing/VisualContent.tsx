@@ -27,7 +27,7 @@ export function VisualContent() {
                     {[
                         { title: "OWO 3D", image: "/images/owo3d.png", link: "https://owo3d.fun" },
                         { title: "Viajes Oeste", image: "/images/viajes-oeste.jpg", link: "https://viajesoeste-one.vercel.app" },
-                        { title: "Ejemplo 3", image: "", link: "#" }
+                        { title: "Instituto Maria Reina", image: "/images/maria-reina.png", link: "https://page-institucional-two.vercel.app" }
                     ].map((item, index) => (
                         <motion.div
                             key={index}

@@ -15,7 +15,7 @@ export function About() {
                 >
                     <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-black/60 z-10" />
                     <img
-                        src="/images/arquitectura-ai.png"
+                        src="/images/about-mockup.png"
                         alt="Diseño Estratégico"
                         className="h-full w-full object-cover"
                     />
