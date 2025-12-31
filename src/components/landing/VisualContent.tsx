@@ -47,7 +47,7 @@ export function VisualContent() {
                                 <img
                                     src={item.image}
                                     alt={item.title}
-                                    className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-opacity"
+                                    className="absolute inset-0 w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-opacity"
                                 />
                             ) : (
                                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
