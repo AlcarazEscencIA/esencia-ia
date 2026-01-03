@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
+import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { CustomCursor } from "@/components/ui/CustomCursor";
+
+const interTight = Inter_Tight({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter-tight",
+  display: "swap",
+});
 
 
 
@@ -20,7 +27,7 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`antialiased bg-black text-white selection:bg-primary/30`}
+        className={`${interTight.variable} antialiased bg-black text-white selection:bg-primary/30`}
       >
         <SmoothScroll>
           <CustomCursor />

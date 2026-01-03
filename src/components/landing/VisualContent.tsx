@@ -13,14 +13,16 @@ export function VisualContent() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center"
+                    className="text-center max-w-4xl mx-auto"
                 >
-                    <h2 className="text-4xl font-bold tracking-wide mb-4">
-                        RESPALDO <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">VISUAL</span>
+                    <h2 className="text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-[1.1] mb-6">
+                        RESPALDO <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-primary to-accent bg-[length:200%_auto] hover:bg-right transition-[background-position] duration-500 cursor-default">VISUAL</span>
                     </h2>
-                    <p className="text-muted-foreground max-w-2xl mx-auto">
-                        El diseño no es decoración. Es una herramienta para guiar, ordenar y comunicar con intención.
-                    </p>
+                    <div className="border-l-4 border-accent pl-6 inline-block">
+                        <p className="text-xl font-semibold text-white/90 text-left">
+                            El diseño no es decoración. Es una herramienta para guiar, ordenar y comunicar con intención.
+                        </p>
+                    </div>
                 </motion.div>
                 {/* Example Grid */}
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -35,7 +37,7 @@ export function VisualContent() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="aspect-video rounded-xl bg-white/5 border border-white/10 flex items-center justify-center relative overflow-hidden group hover:border-primary/50 transition-colors"
+                            className="aspect-video bg-white/5 border border-white/10 flex items-center justify-center relative overflow-hidden group hover:border-primary/50 transition-colors"
                         >
                             {item.link !== "#" ? (
                                 <Link href={item.link} target="_blank" className="absolute inset-0 z-10">

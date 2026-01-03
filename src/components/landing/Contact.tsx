@@ -58,16 +58,22 @@ export function Contact() {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
+                        className="space-y-8"
                     >
-                        <h2 className="mb-6 text-3xl font-bold tracking-wide sm:text-4xl">
-                            ¿Listo para profesionalizar tu proyecto?
+                        <h2 className="text-5xl lg:text-6xl font-black tracking-tight leading-[1.1]">
+                            ¿Listo para
+                            <br />
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary bg-[length:200%_auto] hover:bg-right transition-[background-position] duration-500 cursor-default">profesionalizar</span>
+                            <span className="block">tu proyecto?</span>
                         </h2>
-                        <p className="mb-8 text-lg text-muted-foreground">
-                            Si necesitás una web profesional, con estructura, claridad y criterio, podés escribirnos para conversar sobre tu proyecto.
-                        </p>
+                        <div className="border-l-4 border-primary pl-6">
+                            <p className="text-xl font-semibold text-white/90">
+                                Si necesitás una web profesional, con estructura, claridad y criterio, podés escribirnos para conversar sobre tu proyecto.
+                            </p>
+                        </div>
                         <div className="space-y-4">
                             <div className="flex items-center gap-4">
-                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                <div className="flex h-10 w-10 items-center justify-center rounded-md bg-primary/10 text-primary">
                                     📧
                                 </div>
                                 <div>
@@ -76,7 +82,7 @@ export function Contact() {
                                 </div>
                             </div>
                             <div className="flex items-center gap-4">
-                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                <div className="flex h-10 w-10 items-center justify-center rounded-md bg-primary/10 text-primary">
                                     📍
                                 </div>
                                 <div>

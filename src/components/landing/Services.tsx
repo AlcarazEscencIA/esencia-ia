@@ -38,10 +38,18 @@ export function Services() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mb-20 text-center"
+                    className="mb-20 text-center max-w-4xl mx-auto"
                 >
-                    <h2 className="mb-6 text-4xl font-bold tracking-wide sm:text-5xl md:text-6xl">Nuestros Servicios</h2>
-                    <p className="mx-auto max-w-2xl text-xl text-muted-foreground">Soluciones digitales para cada etapa de crecimiento</p>
+                    <h2 className="mb-6 text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-[1.1]">
+                        Nuestros
+                        <br />
+                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent via-primary to-accent bg-[length:200%_auto] hover:bg-right transition-[background-position] duration-500 cursor-default">Servicios</span>
+                    </h2>
+                    <div className="border-l-4 border-primary pl-6 inline-block">
+                        <p className="text-xl font-semibold text-white/90 text-left">
+                            Soluciones digitales para cada etapa de crecimiento
+                        </p>
+                    </div>
                 </motion.div>
 
                 <div className="grid gap-8 lg:grid-cols-3 lg:gap-12 mb-32">

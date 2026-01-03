@@ -1,20 +1,41 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Building, GraduationCap } from "lucide-react"
 
 export function Institutional() {
     return (
         <section className="py-24 relative bg-black/70 border-y border-white/10 backdrop-blur-sm">
             <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    {/* Text Content (Left) */}
                     <motion.div
-                        initial={{ opacity: 0, x: -20 }}
+                        initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="space-y-8"
                     >
-                        <h2 className="text-3xl font-bold tracking-wide mb-6">Institucional y Educación</h2>
-                        <div className="space-y-6 text-lg text-muted-foreground">
+                        {/* Small Label */}
+                        <div className="text-sm font-medium text-primary tracking-widest uppercase">
+                            Sector Especializado
+                        </div>
+
+                        {/* Main Title */}
+                        <h2 className="text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-[1.1]">
+                            Institucional
+                            <br />
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-secondary via-primary to-secondary bg-[length:200%_auto] hover:bg-right transition-[background-position] duration-500 cursor-default">y Educación</span>
+                        </h2>
+
+                        {/* Subtitle with Accent Border */}
+                        <div className="border-l-4 border-primary pl-6">
+                            <p className="text-xl font-semibold text-white/90">
+                                Presencia digital clara, confiable y profesional.
+                            </p>
+                        </div>
+
+                        {/* Description */}
+                        <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                             <p>
                                 Trabajamos con instituciones y proyectos educativos que necesitan una presencia digital clara, confiable y profesional.
                             </p>
@@ -24,20 +45,61 @@ export function Institutional() {
                         </div>
                     </motion.div>
 
+                    {/* Images Grid (Right) */}
                     <motion.div
-                        initial={{ opacity: 0, x: 20 }}
+                        initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="grid grid-cols-2 gap-4"
+                        transition={{ duration: 0.8 }}
+                        className="grid grid-cols-2 gap-4 h-[500px] lg:h-[600px]"
                     >
-                        <div className="p-8 rounded-2xl bg-black/40 border border-white/10 flex flex-col items-center justify-center text-center">
-                            <Building className="h-12 w-12 text-primary mb-4" />
-                            <span className="font-bold tracking-wide">Instituciones</span>
-                        </div>
-                        <div className="p-8 rounded-2xl bg-black/40 border border-white/10 flex flex-col items-center justify-center text-center">
-                            <GraduationCap className="h-12 w-12 text-secondary mb-4" />
-                            <span className="font-bold tracking-wide">Educación</span>
-                        </div>
+                        {/* Large Image - Left Column */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="relative col-span-1 row-span-2 overflow-hidden border border-white/10"
+                        >
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent z-10" />
+                            <img
+                                src="/images/about-mockup.png"
+                                alt="Institucional"
+                                className="h-full w-full object-cover"
+                            />
+                        </motion.div>
+
+                        {/* Small Image Top - Right Column */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, delay: 0.3 }}
+                            className="relative overflow-hidden border border-white/10"
+                        >
+                            <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent z-10" />
+                            <img
+                                src="/images/about-mockup.png"
+                                alt="Educación"
+                                className="h-full w-full object-cover"
+                            />
+                        </motion.div>
+
+                        {/* Small Image Bottom - Right Column */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, delay: 0.4 }}
+                            className="relative overflow-hidden border border-white/10 bg-gradient-to-br from-primary/10 to-secondary/10"
+                        >
+                            <div className="p-8 bg-black/40 border border-white/10 flex flex-col items-center justify-center text-center">
+                                <div className="text-center space-y-2">
+                                    <div className="text-6xl font-black text-white/10">+</div>
+                                    <p className="text-sm font-medium text-white/60 tracking-wide">Proyectos<br />Institucionales</p>
+                                </div>
+                            </div>
+                        </motion.div>
                     </motion.div>
                 </div>
             </div>

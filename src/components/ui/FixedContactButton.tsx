@@ -45,7 +45,7 @@ export function FixedContactButton() {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="group flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-white font-medium shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-300 glass border border-white/20"
+                            className="group flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-white font-medium shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-300 glass border border-white/20"
                         >
                             <MessageSquare className="h-5 w-5" />
                             <span className="tracking-wide">Contactanos</span>

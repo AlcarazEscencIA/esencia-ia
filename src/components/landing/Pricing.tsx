@@ -44,11 +44,19 @@ const plans = [
 
 export function Pricing() {
     return (
-        <section id="pricing" className="py-24 bg-black/70 backdrop-blur-sm">
+        <section id="pricing" className="py-32 bg-black/70 backdrop-blur-sm">
             <div className="container mx-auto px-4">
-                <div className="mb-16 text-center">
-                    <h2 className="mb-4 text-3xl font-bold tracking-wide sm:text-4xl">Planes Base</h2>
-                    <p className="text-muted-foreground">Nuestros proyectos se desarrollan a partir de planes base orientativos</p>
+                <div className="mb-20 text-center max-w-4xl mx-auto">
+                    <h2 className="mb-6 text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-[1.1]">
+                        Planes
+                        <br />
+                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary bg-[length:200%_auto] hover:bg-right transition-[background-position] duration-500 cursor-default">Base</span>
+                    </h2>
+                    <div className="border-l-4 border-primary pl-6 inline-block">
+                        <p className="text-xl font-semibold text-white/90 text-left">
+                            Nuestros proyectos se desarrollan a partir de planes base orientativos
+                        </p>
+                    </div>
                 </div>
 
                 <div className="grid gap-8 md:grid-cols-3 lg:gap-8">
@@ -62,7 +70,7 @@ export function Pricing() {
                         >
                             <Card className={`relative flex h-full flex-col p-6 ${plan.popular ? "border-primary shadow-lg shadow-primary/20" : ""}`}>
                                 {plan.popular && (
-                                    <div className="absolute -top-4 left-0 right-0 mx-auto w-fit rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
+                                    <div className="absolute -top-4 left-0 right-0 mx-auto w-fit rounded-none bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
                                         Más Popular
                                     </div>
                                 )}

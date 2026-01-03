@@ -48,9 +48,9 @@ export function Hero() {
                     </motion.div>
 
                     <h1 className="text-6xl font-black tracking-widest sm:text-8xl md:text-9xl mb-4">
-                        ESENC<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary">IA</span>
+                        ESENC<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary bg-[length:200%_auto] bg-[0%_0%] hover:bg-[100%_0%] transition-[background-position] duration-500 cursor-default">IA</span>
                     </h1>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-white/80 tracking-widest uppercase">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white/80 tracking-widest uppercase">
                         Diseño web estratégico
                     </h2>
                 </motion.div>
@@ -75,7 +75,7 @@ export function Hero() {
                     className="flex flex-col items-center justify-center gap-6 sm:flex-row"
                 >
                     <Link href="#contact">
-                        <Button size="lg" className="group h-14 min-w-[200px] rounded-full text-lg cursor-hover">
+                        <Button variant="outline" size="lg" className="h-14 min-w-[200px] rounded-md text-lg bg-white/5 border-white/10 hover:bg-white/10 text-white cursor-hover">
                             Consultar proyecto
                             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                         </Button>

@@ -15,14 +15,16 @@ export function CustomDev() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center"
+                    className="text-center max-w-4xl mx-auto"
                 >
-                    <h2 className="text-4xl font-bold tracking-wide mb-4">
-                        PROCESO Y <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">ENFOQUE</span>
+                    <h2 className="text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-[1.1] mb-6">
+                        PROCESO Y <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-primary to-secondary bg-[length:200%_auto] hover:bg-right transition-[background-position] duration-500 cursor-default">ENFOQUE</span>
                     </h2>
-                    <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-                        Cada proyecto se desarrolla a través de un proceso claro y ordenado.
-                    </p>
+                    <div className="border-l-4 border-secondary pl-6 inline-block">
+                        <p className="text-xl font-semibold text-white/90 text-left">
+                            Cada proyecto se desarrolla a través de un proceso claro y ordenado.
+                        </p>
+                    </div>
                 </motion.div>
 
                 {/* Methodology Steps */}
@@ -69,7 +71,7 @@ export function CustomDev() {
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="relative h-[500px] rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-secondary/10 to-primary/10"
+                        className="relative h-[500px] overflow-hidden border border-white/10 bg-gradient-to-br from-secondary/10 to-primary/10"
                     >
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="text-8xl font-black tracking-widest text-white/5 select-none text-center leading-none">

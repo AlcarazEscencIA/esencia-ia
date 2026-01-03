@@ -24,7 +24,7 @@ export function ComparisonSlider({
     const isItemTwoVideo = itemTwoIsVideo || itemTwo.match(/\.(mp4|webm|mov|ogg)$/i)
 
     return (
-        <div className="relative h-[400px] w-full overflow-hidden rounded-xl border border-white/10 shadow-2xl sm:h-[600px]">
+        <div className="relative h-[400px] w-full overflow-hidden border border-white/10 shadow-2xl sm:h-[600px]">
             <ReactCompareSlider
                 itemOne={
                     isItemOneVideo ? (
@@ -56,10 +56,10 @@ export function ComparisonSlider({
                 }
                 className="h-full w-full"
             />
-            <div className="pointer-events-none absolute bottom-4 left-4 z-10 rounded-full bg-black/50 px-3 py-1 text-xs font-medium text-white backdrop-blur-md">
+            <div className="pointer-events-none absolute bottom-4 left-4 z-10 rounded-sm bg-black/50 px-3 py-1 text-xs font-medium text-white backdrop-blur-md">
                 {labelOne}
             </div>
-            <div className="pointer-events-none absolute bottom-4 right-4 z-10 rounded-full bg-black/50 px-3 py-1 text-xs font-medium text-white backdrop-blur-md">
+            <div className="pointer-events-none absolute bottom-4 right-4 z-10 rounded-sm bg-black/50 px-3 py-1 text-xs font-medium text-white backdrop-blur-md">
                 {labelTwo}
             </div>
         </div>
