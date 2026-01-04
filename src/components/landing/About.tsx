@@ -18,18 +18,16 @@ export function About() {
                         {/* Main Title */}
                         <div className="space-y-4">
                             <h2 className="text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-[1.1] text-white">
-                                En <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary bg-[length:200%_auto] hover:bg-right transition-[background-position] duration-500 cursor-default">ESENCiA</span>
+                                Diseño web
                                 <br />
-                                <span className="block">no hacemos</span>
-                                <span className="block">páginas web</span>
-                                <span className="block">sin sentido.</span>
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary bg-[length:200%_auto] hover:bg-right transition-[background-position] duration-500 cursor-default">con propósito.</span>
                             </h2>
                         </div>
 
                         {/* Subtitle */}
                         <div className="border-l-4 border-primary pl-6">
                             <p className="text-xl font-semibold text-white/90">
-                                Diseño con propósito.
+                                En ESENCIA creamos sitios que cumplen un objetivo real.
                             </p>
                         </div>
 
@@ -39,7 +37,7 @@ export function About() {
                                 Diseñamos sitios pensados para cumplir un objetivo concreto: comunicar con claridad, generar confianza y acompañar el crecimiento de cada proyecto.
                             </p>
                             <p>
-                                Trabajamos desde la estructura, la estrategia y el diseño consciente, entendiendo la web como una herramienta clave de profesionalización y presencia digital.
+                                Nuestro enfoque combina estrategia, estructura y diseño consciente, entendiendo la web como una herramienta clave para profesionalizar tu presencia digital.
                             </p>
                         </div>
 
