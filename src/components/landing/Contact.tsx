@@ -51,7 +51,7 @@ export function Contact() {
     }
 
     return (
-        <section id="contact" className="py-24">
+        <section id="contact" className="py-24 bg-[#FFFFF0] border-t border-neutral-200">
             <div className="container mx-auto px-4">
                 <div className="grid gap-12 lg:grid-cols-2">
                     <motion.div
@@ -60,14 +60,14 @@ export function Contact() {
                         viewport={{ once: true }}
                         className="space-y-8"
                     >
-                        <h2 className="text-5xl lg:text-6xl font-black tracking-tight leading-[1.1]">
+                        <h2 className="text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-black font-sans">
                             ¿Listo para
                             <br />
                             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-secondary bg-[length:200%_auto] hover:bg-right transition-[background-position] duration-500 cursor-default">profesionalizar</span>
                             <span className="block">tu proyecto?</span>
                         </h2>
                         <div className="border-l-4 border-primary pl-6">
-                            <p className="text-xl font-semibold text-white/90">
+                            <p className="text-xl font-semibold text-black/90 font-sans tracking-wide">
                                 Si necesitás una web profesional, con estructura, claridad y criterio, podés escribirnos para conversar sobre tu proyecto.
                             </p>
                         </div>
@@ -77,8 +77,8 @@ export function Contact() {
                                     📧
                                 </div>
                                 <div>
-                                    <div className="font-medium tracking-wide">Email</div>
-                                    <div className="text-muted-foreground">esenciaweb.ia@gmail.com</div>
+                                    <div className="font-medium tracking-wide text-black font-sans">Email</div>
+                                    <div className="text-neutral-600 font-sans">esenciaweb.ia@gmail.com</div>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4">
@@ -86,8 +86,8 @@ export function Contact() {
                                     📍
                                 </div>
                                 <div>
-                                    <div className="font-medium tracking-wide">Ubicación</div>
-                                    <div className="text-muted-foreground">Buenos Aires, Argentina</div>
+                                    <div className="font-medium tracking-wide text-black font-sans">Ubicación</div>
+                                    <div className="text-neutral-600 font-sans">Buenos Aires, Argentina</div>
                                 </div>
                             </div>
                         </div>
@@ -98,15 +98,15 @@ export function Contact() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <Card>
+                        <Card className="bg-[#FFFFF0] border-neutral-200 shadow-2xl">
                             <CardHeader>
-                                <CardTitle>Contáctanos</CardTitle>
+                                <CardTitle className="text-black font-sans tracking-tight">Contáctanos</CardTitle>
                             </CardHeader>
                             <CardContent>
                                 <form onSubmit={handleSubmit} className="space-y-4">
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div className="space-y-2">
-                                            <label htmlFor="name" className="text-sm font-medium tracking-wide">Nombre</label>
+                                            <label htmlFor="name" className="text-sm font-medium tracking-wide text-black font-sans">Nombre</label>
                                             <Input
                                                 id="name"
                                                 placeholder="Tu nombre"
@@ -114,10 +114,11 @@ export function Contact() {
                                                 onChange={handleChange}
                                                 required
                                                 disabled={isSubmitting}
+                                                className="bg-white border-neutral-200 text-black placeholder:text-gray-400 focus-visible:ring-primary"
                                             />
                                         </div>
                                         <div className="space-y-2">
-                                            <label htmlFor="email" className="text-sm font-medium tracking-wide">Email</label>
+                                            <label htmlFor="email" className="text-sm font-medium tracking-wide text-black font-sans">Email</label>
                                             <Input
                                                 id="email"
                                                 type="email"
@@ -126,14 +127,15 @@ export function Contact() {
                                                 onChange={handleChange}
                                                 required
                                                 disabled={isSubmitting}
+                                                className="bg-white border-neutral-200 text-black placeholder:text-gray-400 focus-visible:ring-primary"
                                             />
                                         </div>
                                     </div>
                                     <div className="space-y-2">
-                                        <label htmlFor="message" className="text-sm font-medium tracking-wide">Mensaje</label>
+                                        <label htmlFor="message" className="text-sm font-medium tracking-wide text-black font-sans">Mensaje</label>
                                         <textarea
                                             id="message"
-                                            className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 glass"
+                                            className="flex min-h-[120px] w-full rounded-md border border-neutral-200 bg-white px-3 py-2 text-sm text-black ring-offset-background placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 font-sans"
                                             placeholder="Cuéntanos sobre tu proyecto..."
                                             value={formData.message}
                                             onChange={handleChange}
@@ -153,7 +155,7 @@ export function Contact() {
 
                                     <Button
                                         type="submit"
-                                        className="w-full"
+                                        className="w-full font-sans tracking-wide"
                                         disabled={isSubmitting}
                                     >
                                         {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
