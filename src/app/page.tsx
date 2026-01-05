@@ -6,6 +6,7 @@ import { CustomDev } from "@/components/landing/CustomDev"
 import { Contact } from "@/components/landing/Contact"
 import { FixedContactButton } from "@/components/ui/FixedContactButton"
 
+
 export default function Home() {
   return (
     <>
